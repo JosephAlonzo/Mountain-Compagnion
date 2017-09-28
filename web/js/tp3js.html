@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title> Travaille practique 3 js</title>
+    <meta charset="utf-8">
+     <script type="text/javascript">
+        function validerLogin(){
+            var text = document.getElementById("login").value;
+            var message = "";
+            var re = /W/;
+            if(text == ""){
+                message = "le text c'est vide \n";
+            }
+            else{
+                alert(re.test(text));
+            }
+            
+           
+            
+            }
+        
+    </script>
+    </head> 
+    <body>
+        <h1> Remplir le formulaire suivant</h1>
+
+<form>
+	<fieldset>
+		<legend>Personnel</legend>
+		<br>
+		login: <input type="text" name="" id="login">
+		<br>
+		Mot de passe: <input type="password"  name="" id="motpasse">
+		<br>
+		Email: <input type="text" name="" id="Email">
+		<br>
+		Numéro de téléphone: <input type="text" name="" id="numero">
+		<br>
+		Adresse: <input type="text" name="" id="Adresse">
+		<br>
+		Code Postal <input type="text" name="" id="cp">
+		<br>
+		Ville: <input type="text" name="" id="ville">
+		<br>
+		<input type="button" name="" value="Effacer">  <input type="button" name="" value="Envoyer" onclick="validerLogin()">
+        </fieldset>
+</form>
+    </body>
+</html>
