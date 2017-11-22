@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Moutain_Companion</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!-- nom des menus -->
+
+    <string name="View"> View </string>
+    <string name="Map"> Map </string>
+    <string name="Tutorial"> Tutorial </string>
+    <string name="Calibration"> Calibration </string>
+    <string name="Settings"> Settings </string>
+    <string name="About"> About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
