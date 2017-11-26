@@ -31,6 +31,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -222,7 +223,7 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
                 for (Mountain m: mountains) {
 
                     LatLng latLngTest2 = new LatLng(m.getLatitude(), m.getLongitude());
-                    mGoogleMap.addMarker(new MarkerOptions().position(latLngTest2).title(m.getNom()));
+                    mGoogleMap.addMarker(new MarkerOptions().position(latLngTest2).title(m.getNom()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_montagne)));
                 }
             }
         }

@@ -52,6 +52,12 @@ public class MountainDatabaseHandler extends SQLiteOpenHelper {
 
         String insert_end = "(\"6.84486789904718\" , \"47.8224908948974\" , \"Ballon d'Alsace\" , \"1247\");";
         sqLiteDatabase.execSQL(insert_beg + insert_end);
+
+        insert_end = "(\"6.89760629903985\" , \"47.8895027948947\" , \"Col de Bussang\" , \"731\");";
+        sqLiteDatabase.execSQL(insert_beg + insert_end);
+
+        insert_end = "(\"6.91711559903713\" , \"47.9227979948934\" , \"Col d'Oderen\" , \"884\");";
+        sqLiteDatabase.execSQL(insert_beg + insert_end);
     }
 
     @Override
