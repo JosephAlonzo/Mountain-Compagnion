@@ -1,4 +1,4 @@
-package com.example.valentin.moutain_companion;
+package com.example.valentin.moutain_companion.views;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.valentin.moutain_companion.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,

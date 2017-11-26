@@ -1,4 +1,4 @@
-package com.example.valentin.moutain_companion;
+package com.example.valentin.moutain_companion.views;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.valentin.moutain_companion.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Map_fragment.OnFragmentInteractionListener} interface
+ * {@link About_fragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Map_fragment#newInstance} factory method to
+ * Use the {@link About_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Map_fragment extends Fragment {
+public class About_fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class Map_fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Map_fragment() {
+    public About_fragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class Map_fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Map_fragment.
+     * @return A new instance of fragment About_fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Map_fragment newInstance(String param1, String param2) {
-        Map_fragment fragment = new Map_fragment();
+    public static About_fragment newInstance(String param1, String param2) {
+        About_fragment fragment = new About_fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +66,7 @@ public class Map_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_about_fragment, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
