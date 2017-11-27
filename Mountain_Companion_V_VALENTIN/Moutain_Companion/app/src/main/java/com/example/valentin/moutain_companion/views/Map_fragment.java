@@ -2,6 +2,7 @@ package com.example.valentin.moutain_companion.views;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
@@ -9,14 +10,18 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.valentin.moutain_companion.managers.MountainDataSource;
 import com.example.valentin.moutain_companion.managers.MountainDatabaseHandler;
 import com.example.valentin.moutain_companion.models.Mountain;
 import com.google.android.gms.location.LocationListener;
@@ -61,11 +66,18 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
 
     private GoogleApiClient mGoogleApiClient = null;
     private LocationRequest mLocationRequest;
-    private Location mLocationActuelle;
+
     private Location mLastLocation;
     private GoogleMap mGoogleMap;
 
+    private LatLng mLatLngMaposition;
+
+    private int mRadius;
+
     private OnFragmentInteractionListener mListener;
+
+    private MountainDataSource mDataSource;
+    private boolean mLocationEnabled;
 
     public Map_fragment() {
         // Required empty public constructor
@@ -147,6 +159,8 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
     public void onStart() {
 
         super.onStart();
+
+        setLocationParameters();
         mGoogleApiClient.connect();
     }
 
@@ -168,6 +182,14 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
     public void onResume() {
 
         super.onResume();
+        setLocationParameters();
+        if(mGoogleApiClient.isConnected()) {
+
+            if(mLocationEnabled) {
+
+                startLocationUpdates();
+            }
+        }
     }
 
     /***************    Méthodes de l'interface LocationListener        *************************/
@@ -175,7 +197,9 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
     @Override
     public void onLocationChanged(Location location) {
 
+        Toast.makeText(getActivity(), "New Location !", Toast.LENGTH_SHORT).show();
 
+        mountainUpdateUi(location);
     }
 
     /**************/
@@ -186,6 +210,8 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
 
         mGoogleMap = googleMap;
 
+        mountainUpdateUi(null);
+
     }
 
     /**********/
@@ -195,36 +221,24 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
     @Override
     public void onConnected(@Nullable Bundle bundle) {
 
-        LatLngBounds.Builder b = new LatLngBounds.Builder();
-
         if(ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
 
             requestLocationPermission();
         } else {
+
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
             if (mLastLocation != null) {
 
-                LatLng latLngTest = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+                mountainUpdateUi(mLastLocation);
+                mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mLatLngMaposition, 10.0f));
+            }
 
-                mGoogleMap.addMarker(new MarkerOptions().position(latLngTest).title("Ma position"));
-                mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(latLngTest));
+            if (mLocationEnabled) {
 
-                b.include(latLngTest);
+                startLocationUpdates();
+            } else {
 
-                LatLngBounds bound = b.build();
-                CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bound, 60);
-                mGoogleMap.animateCamera(cu);
-
-
-                MountainDatabaseHandler db = new MountainDatabaseHandler(getContext(), MountainDatabaseHandler.MOUNTAIN_TABLE_NAME,null,1);
-
-                ArrayList<Mountain> mountains = db.getMountains();
-
-                for (Mountain m: mountains) {
-
-                    LatLng latLngTest2 = new LatLng(m.getLatitude(), m.getLongitude());
-                    mGoogleMap.addMarker(new MarkerOptions().position(latLngTest2).title(m.getNom()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_montagne)));
-                }
+                stopLocationUpdates();
             }
         }
 
@@ -255,6 +269,19 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
                 REQUEST_LOCATION);
     }
 
+    private void setLocationParameters() {
+
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        mLocationEnabled = sharedPref.getBoolean(getResources().getString(R.string.key_location_switch), false);
+
+        if(mLocationEnabled) {
+
+            Toast.makeText(getActivity(), "Localisation ON", Toast.LENGTH_SHORT).show();
+
+            mLocationRequest = new LocationRequest();
+            mLocationRequest.setInterval(1000);
+        }
+    }
 
     protected void startLocationUpdates() {
 
@@ -272,6 +299,50 @@ public class Map_fragment extends Fragment implements LocationListener, OnMapRea
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
     }
 
+
+    private void mountainUpdateUi(Location location) {
+
+        if (location != null) {
+
+            mGoogleMap.clear();
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        mRadius = Integer.parseInt(sharedPref.getString(getResources().getString(R.string.key_search_radius), "0"));
+
+        //LatLngBounds.Builder b = new LatLngBounds.Builder();
+
+        mLatLngMaposition = new LatLng(location.getLatitude(), location.getLongitude());
+
+        mGoogleMap.addMarker(new MarkerOptions().position(mLatLngMaposition).title("Ma position"));
+
+        mDataSource = new MountainDataSource(getContext());
+        mDataSource.open();
+
+        ArrayList<Mountain> mountains = mDataSource.getAllMountains();
+
+        for (Mountain m: mountains) {
+
+            Location latLngMountain = new Location("");
+            latLngMountain.setLatitude(m.getLatitude());
+            latLngMountain.setLongitude(m.getLongitude());
+
+            if (location.distanceTo(latLngMountain) <= mRadius) {
+
+                LatLng latLngTest2 = new LatLng(m.getLatitude(), m.getLongitude());
+                mGoogleMap.addMarker(new MarkerOptions().position(latLngTest2).title(m.getNom()).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_montagne)));
+
+              //  b.include(latLngTest2);
+            }
+        }
+
+//                LatLngBounds bound = b.build();
+//                CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bound, 16.0f);
+
+        //  mGoogleMap.animateCamera(cu);
+
+        mDataSource.close();
+    }
+
+    }
 
     /***
      * This interface must be implemented by activities that contain this

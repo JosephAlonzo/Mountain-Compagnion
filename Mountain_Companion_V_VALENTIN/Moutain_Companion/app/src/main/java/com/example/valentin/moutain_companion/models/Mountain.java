@@ -10,20 +10,20 @@ public class Mountain {
     private float latitude;
     private float longitude;
     private String nom;
-    private int idk;
+    private int altitude;
 
 
     public Mountain(){
 
     }
 
-    public Mountain(int id, float latitude, float longitude, String nom, int idk) {
+    public Mountain(int id, float latitude, float longitude, String nom, int altitude) {
 
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
         this.nom = nom;
-        this.idk = idk;
+        this.altitude = altitude;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Mountain {
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
                 ", nom='" + nom + '\'' +
-                ", idk=" + idk +
+                ", altitude=" + altitude +
                 '}';
     }
 
@@ -71,11 +71,11 @@ public class Mountain {
         this.nom = nom;
     }
 
-    public int getIdk() {
-        return idk;
+    public int getAltitude() {
+        return altitude;
     }
 
-    public void setIdk(int idk) {
-        this.idk = idk;
+    public void setAltitude(int altitude) {
+        this.altitude = altitude;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.valentin.moutain_companion.views;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.valentin.moutain_companion.R;
+import com.example.valentin.moutain_companion.views.Preferences.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -92,6 +94,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 

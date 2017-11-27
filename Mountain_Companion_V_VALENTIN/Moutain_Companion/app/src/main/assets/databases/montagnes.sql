@@ -5,7 +5,7 @@ CREATE TABLE sommets (
     longitude FLOAT,
     latitude FLOAT,
     nom VARCHAR(40),
-    idk INTEGER
+    altitude INTEGER
 );
 
 INSERT INTO sommets VALUES (1116621810, '6.84486789904718', '47.8224908948974', 'Ballon d''Alsace', 1247);
