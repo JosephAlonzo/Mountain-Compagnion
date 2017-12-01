@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Moutain_Companion.iml" filepath="$PROJECT_DIR$/Moutain_Companion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjetMountainCompanionV1.iml" filepath="$PROJECT_DIR$/ProjetMountainCompanionV1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
