@@ -19,7 +19,7 @@ import com.example.valentin.moutain_companion.views.Map_fragment;
 import com.example.valentin.moutain_companion.views.Settings_fragment;
 import com.example.valentin.moutain_companion.views.Tutorial_fragment;
 
-public class CameraActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class CameraActivity extends AppCompatActivity{
 
     private Camera mCamera = null;
     private CameraView mCameraView = null;
@@ -60,48 +60,4 @@ public class CameraActivity extends AppCompatActivity implements NavigationView.
         }
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-        mFragment = new Map_fragment();
-
-        switch(id) {
-
-            case R.id.nav_view0:
-
-                Intent intent = new Intent(this, CameraActivity.class);
-                startActivity(intent);
-                // fragment = new CameraActivity();
-                break;
-
-            case R.id.nav_map:
-                mFragment = new Map_fragment();
-                fm.beginTransaction().replace(R.id.content_main,mFragment).commit();
-                break;
-
-            case R.id.nav_tutorial:
-                mFragment = new Tutorial_fragment();
-                fm.beginTransaction().replace(R.id.content_main,mFragment).commit();
-                break;
-
-            case R.id.nav_calibration:
-                mFragment = new Calibration_fragment();
-                fm.beginTransaction().replace(R.id.content_main,mFragment).commit();
-                break;
-
-            case R.id.nav_settings:
-                mFragment = new Settings_fragment();
-                fm.beginTransaction().replace(R.id.content_main,mFragment).commit();
-                break;
-
-            case R.id.nav_about:
-                mFragment = new About_fragment();
-                fm.beginTransaction().replace(R.id.content_main,mFragment).commit();
-                break;
-
-        }
-
-        return true;
-    }
 }
