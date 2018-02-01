@@ -16,7 +16,6 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 public class MountainDatabaseHandler extends SQLiteAssetHelper {
 
     public static String DB_NAME = "montagnes.db";
-    public  String testvalentin = "soy velentin";
 
 //    public static final String MOUNTAIN_KEY = "id";
 //    public static final String MOUNTAIN_LONGITUDE = "longitude";
