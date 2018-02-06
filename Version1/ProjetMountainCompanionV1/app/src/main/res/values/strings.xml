@@ -95,4 +95,65 @@
     <string name="key_search_radius">key_search_radius</string>
     <string name="key_max_distance">key_max_distance</string>
     <string name="key_location_switch">key_location_switch</string>
+
+
+    <!-- A propos -->
+    <string name="presentation">\n
+        Version : 0.0.1\n
+Iut-bm.univ-fcomte.fr\n
+isabelle.marguet@univ-fcomte.fr
+
+    </string>
+
+
+    <string name="Titre_a_propos"> Mountain Companion</string>
+    <string name="Texte_Google_Maps1">
+        Google Maps maps.google.fr est un service gratuit de cartographie en ligne.
+        Le service a été créé par Google.
+        Lancé en 2004 aux États-Unis et au Canada et en 2005 en Grande-Bretagne
+        (sous le nom de Google Local), Google Maps a été lancé jeudi 27 avril 2006,
+        simultanément en France, Allemagne, Espagne et Italie.
+    </string>
+
+    <string name="Texte_Google_Maps2">
+        C\'est un service disponible sur PC, tablette et smartphone qui permet de l\'échelle d\'un pays,
+        de zoomer jusqu\'à l\'échelle d\'une rue. Des prises de vue fixes montrent les détails de certaines rues sont
+        également accessibles grâce à une passerelle vers Google Street View streetviewing.fr .
+    </string>
+
+    <string name="Unsplash_title">
+        Unsplash.com
+    </string>
+
+    <string name="Unsplash_text">
+        Le site Unsplash.com est une banque d\'images, c\'est-à-dire une plateforme où chacun peut trouver une photo pour illustrer un projet, un article et même à des fins commerciales. Mais Unsplash est légèrement différent des autres sites du même genre.
+
+On y trouve en effet des centaines d\'images, toutes en haute définition mais surtout entièrement gratuites et libres de droit, sous la licence Creative Commons Zero.
+        Cela signifie que chaque photo peut être copiée, modifiée et partagée sans que son utilisateur ne soit inquiété par des droits d\'auteur.
+        Chaque image est proposée au site par les internautes puis publiée avec le nom du photographe.
+    </string>
+
+
+    <string name="Wikipedia"> Wikipedia </string>
+
+    <string name="Text_wikipedia">
+
+        Wikipédia est un projet d\'encyclopédie universelle, multilingue, créé par Jimmy Wales et Larry Sanger
+        le 15 janvier 2001 en wiki sous le nom de domaine wikipedia.org. Les versions des différentes langues
+        utilisent le même logiciel de publication, MediaWiki, et ont la même apparence,
+        mais elles comportent des variations dans leurs contenus, leurs structures et leurs modalités d\'édition et de gestion.
+    </string>
+
+
+    <string name="Membre"> Membres de l\'équipe</string>
+
+    <string name="Equipe">\nJose Alvarado Alvarado\nJoseph Alonzo Aranda\n
+Valentin Guenon\n
+Isabelle Marguet\n
+Soufiane Zalmad\n
+Yassine Zekri\n
+
+    </string>
+
+
 </resources>
