@@ -48,7 +48,7 @@ dependencies {
     compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
     compile 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
     testCompile 'junit:junit:4.12'
-   // androidTestCompile'com.android.support.test:runner:1.0.1'
-
-
+    // androidTestCompile'com.android.support.test:runner:1.0.1'
 }
+
+

@@ -19,6 +19,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import iut_bm_lp.projet_mountaincompanion_v1.R;
 import iut_bm_lp.projet_mountaincompanion_v1.views.Preferences.SettingsActivity;
@@ -43,7 +46,6 @@ public class MainActivity extends AppCompatActivity
         fm = getSupportFragmentManager();
         fragment = new Map_Fragment();
         fm.beginTransaction().replace(R.id.content_main,fragment).commit();
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -120,7 +122,7 @@ public class MainActivity extends AppCompatActivity
             fragment = new Map_Fragment();
             fm.beginTransaction().replace(R.id.content_main,fragment).commit();
         } else if (id == R.id.nav_tutoriel) {
-            Intent i = new Intent(getApplicationContext(), Tutoriel.class);
+            Intent i = new Intent(getApplicationContext(), TutoActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_calibrage) {
             fragment = new Calibration_Fragment();

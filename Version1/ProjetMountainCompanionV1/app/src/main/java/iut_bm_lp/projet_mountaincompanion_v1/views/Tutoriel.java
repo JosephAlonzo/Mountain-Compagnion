@@ -20,7 +20,7 @@ public class Tutoriel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutoriel);
+        //setContentView(R.layout.activity_tutoriel);
 
         View decorView = getWindow().getDecorView();
 // Hide both the navigation bar and the status bar.
