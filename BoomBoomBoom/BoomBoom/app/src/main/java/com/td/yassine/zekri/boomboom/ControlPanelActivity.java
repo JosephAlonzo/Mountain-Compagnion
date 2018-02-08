@@ -18,8 +18,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.td.yassine.zekri.boomboom.fragments.Create_session_fragment;
+import com.td.yassine.zekri.boomboom.fragments.Show_session_Fragment;
+import com.td.yassine.zekri.boomboom.fragments.Start_session_Fragment;
 
-public class ControlPanelActivity extends AppCompatActivity implements Create_session_fragment.OnFragmentInteractionListener{
+public class ControlPanelActivity extends AppCompatActivity implements Create_session_fragment.OnFragmentInteractionListener, Show_session_Fragment.OnFragmentInteractionListener, Start_session_Fragment.OnFragmentInteractionListener{
 
     private FirebaseAuth firebaseAuth;
 

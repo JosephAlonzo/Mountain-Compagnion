@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.td.yassine.zekri.boomboom.MainActivity;
 import com.td.yassine.zekri.boomboom.ProfilActivity;
 import com.td.yassine.zekri.boomboom.R;
@@ -42,7 +45,7 @@ import java.util.SimpleTimeZone;
  * Use the {@link Create_session_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Create_session_fragment extends Fragment implements View.OnClickListener {
+public class Create_session_fragment extends Fragment implements View.OnClickListener, Show_session_Fragment.OnFragmentInteractionListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -56,16 +59,22 @@ public class Create_session_fragment extends Fragment implements View.OnClickLis
 
     private OnFragmentInteractionListener mListener;
 
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+
     private FirebaseAuth firebaseAuth;
     private TextView textViewNomUser;
-    private Button buttonConfirm;
+    private EditText editTextNomSession;
 
-    private DatabaseReference databaseReference;
+    private Button buttonConfirm;
 
     private TextView textViewChooseDate;
     private TextView textViewChooseHour;
 
     private Calendar myCalendar;
+
+    private FragmentManager fm = null;
+    private Fragment fragment = null;
 
     public Create_session_fragment() {
         // Required empty public constructor
@@ -96,6 +105,8 @@ public class Create_session_fragment extends Fragment implements View.OnClickLis
         root = inflater.inflate(R.layout.fragment_create_session, container, false);
 
 
+
+        editTextNomSession = root.findViewById(R.id.editTextNomSession);
         textViewNomUser = root.findViewById(R.id.textViewNomUser);
         buttonConfirm = root.findViewById(R.id.buttonConfirm);
 
@@ -117,7 +128,12 @@ public class Create_session_fragment extends Fragment implements View.OnClickLis
             textViewNomUser.setText("Bienvenue " + user.getDisplayName());
         }
 
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Sessions");
+
         buttonConfirm.setOnClickListener(this);
+
+        /***    Date et Heure  ***/
         textViewChooseDate.setOnClickListener(this);
         textViewChooseHour.setOnClickListener(this);
 
@@ -212,7 +228,26 @@ public class Create_session_fragment extends Fragment implements View.OnClickLis
 
     private void createSession() {
 
-//        String name =
+        String hour = textViewChooseHour.getText().toString().trim();
+        myRef.child("Hour").setValue(hour);
+
+        String date = textViewChooseDate.getText().toString().trim();
+        myRef.child("Date").setValue(date);
+
+        String name = editTextNomSession.getText().toString().trim();
+        myRef.child("Nom").setValue(name);
+
+        fm = getActivity().getSupportFragmentManager();
+        fragment = new Show_session_Fragment();
+        fm.beginTransaction().addToBackStack(fragment.toString())
+                .hide(this)
+                .replace(R.id.testView, fragment)
+                .commit();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /**
