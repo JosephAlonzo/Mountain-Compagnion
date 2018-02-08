@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    tools:context="com.td.yassine.zekri.boomboom.fragments.Create_session_fragment">
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewNomUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@id/textViewNomUser"
+        android:id="@+id/textViewNomSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Création d'une session"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/textViewNomSession"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <EditText
+
+            android:layout_marginTop="10dp"
+            android:id="@+id/editTextNomSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nom de la session" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="- Date de la séance -"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/textViewChooseDate"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Click to choose date !"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="- Heure de la séance -"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/textViewChooseHour"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to choose hour !"
+            />
+        <Button
+
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/buttonConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            tools:layout_editor_absoluteX="251dp"
+            tools:layout_editor_absoluteY="368dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

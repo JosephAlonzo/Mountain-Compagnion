@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "164288051385",
+    "firebase_url": "https://boomboom-8f730.firebaseio.com",
+    "project_id": "boomboom-8f730",
+    "storage_bucket": "boomboom-8f730.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164288051385:android:10012f7561282120",
+        "android_client_info": {
+          "package_name": "com.td.yassine.zekri.boomboom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164288051385-ghjgkqiu0timn7shqtove8jr3pqgvnl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.td.yassine.zekri.boomboom",
+            "certificate_hash": "b18d751265fa4df1415e7ffee9221b37673f90f8"
+          }
+        },
+        {
+          "client_id": "164288051385-gn586rt5t7etqt51jj5efete32uab7st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.td.yassine.zekri.boomboom",
+            "certificate_hash": "f6e5042199d0e5df041b9bf21b185412ddd863a8"
+          }
+        },
+        {
+          "client_id": "164288051385-8dks7h5345rp7t0fg3ripgngol5cg0v8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMk3we87stXN9sXKXe42cgpTG4mfsCCrI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164288051385-8dks7h5345rp7t0fg3ripgngol5cg0v8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
