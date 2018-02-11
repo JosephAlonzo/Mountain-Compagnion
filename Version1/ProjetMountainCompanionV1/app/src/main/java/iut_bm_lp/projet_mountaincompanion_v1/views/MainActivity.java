@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity
             fragment = new Map_Fragment();
             fm.beginTransaction().replace(R.id.content_main,fragment).commit();
         } else if (id == R.id.nav_tutoriel) {
-            Intent i = new Intent(getApplicationContext(), Tutoriel.class);
+            Intent i = new Intent(getApplicationContext(), TutoActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_calibrage) {
             fragment = new Calibration_Fragment();
