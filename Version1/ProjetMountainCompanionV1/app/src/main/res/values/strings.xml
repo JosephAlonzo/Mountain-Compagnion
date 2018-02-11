@@ -95,7 +95,10 @@
     <string name="key_location_switch">key_location_switch</string>
 
 
-<<<<<<< Updated upstream
+<!--<! HEAD-->
+<!--<<<<<<< Updated upstream-->
+<!--=======-->
+<!--&gt;>>>>>> Tutoriel-->
     <!-- A propos -->
     <string name="presentation">\n
         Version : 0.0.1\n
@@ -155,16 +158,37 @@ Yassine Zekri\n
     </string>
 
 
+<!--<<<<<<< HEAD-->
 =======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Tutoriel
 
-    <string name="next">Next</string>
+    <string name="next">Suivant</string>
     <string name="skip">Skip</string>
     <string name="start">Start</string>
-    <string name="title_slide1">Connect the charger</string>
-    <string name="desc_slide1">It will start automatically when charger is connected</string>
-    <string name="title_slide2">Battery status update</string>
-    <string name="desc_slide2">It will  keep you updated on battery charging status through notification and home screen widget</string>
-    <string name="title_slide3">Alert on 100%</string>
-    <string name="desc_slide3">It will alert you when battery reaches 100%</string>
->>>>>>> Stashed changes
+
+    <string name="tutointro">Bienvenue</string>
+    <string name="desc_intro">
+        Nous ferons un tour rapide des principales fonctions du Mountain Companion.\n\n
+        Rappelez-vous que vous pouvez accéder au tutoriel depuis le menu.
+    </string>
+    <string name="title_slide1">Position</string>
+    <string name="desc_slide1">
+        Pour obteneir des informations sur les montagnes et les lacs à proximité, nous devons accéder à votre position.
+    </string>
+    <string name="title_slide2">Connexion Internet</string>
+    <string name="desc_slide2">
+        Par défaut, Mountain Companion nécessite une connexion Internet pour charger la carte.\n\n
+        Cependant, il est possible de télécharger une zone et l\'application fonctionnera sans connexion Internet das les régions couvertes par celle-ci.\n\n
+        Vous pouvez voir les téléchargements depuis le menu de l\'application.
+    </string>
+    <string name="title_slide3">Montagnes</string>
+    <string name="desc_slide3">
+        Mountain Companion est une application qui permet d\estimer la position des montagnes, elle doit
+        donc être utilisée dans un evironnement où les montagnes sont vissibles.
+    </string>
+
+    <string name="tuto4">Allez-y</string>
+    <string name="desc_tuto4">Blabla</string>
 </resources>
