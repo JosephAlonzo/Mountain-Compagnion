@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -48,8 +49,6 @@ public class TutoActivity extends Activity {
 
 
         setContentView(R.layout.activity_tuto);
-
-
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -145,6 +144,12 @@ public class TutoActivity extends Activity {
     }
 
     private void launchHomeScreen() {
+        SharedPreferences share = getSharedPreferences("PREFS", MODE_PRIVATE);
+        SharedPreferences.Editor editor;
+
+        editor = share.edit();
+        editor.putInt("INTRO", 1);
+        editor.apply();
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

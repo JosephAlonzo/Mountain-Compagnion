@@ -2,6 +2,7 @@ package iut_bm_lp.projet_mountaincompanion_v1.views;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.view.View;
@@ -64,8 +65,16 @@ public class Splashscreen extends Activity {
                         sleep(100);
                         waited += 100;
                     }
-                    Intent intent = new Intent(Splashscreen.this,
-                            TutoActivity.class);
+
+                    SharedPreferences share = getSharedPreferences("PREFS", MODE_PRIVATE);
+                    Intent intent = null;
+                    if (share.getInt("INTRO", 0) == 1){
+                        intent = new Intent(Splashscreen.this,
+                                MainActivity.class);
+                    }else{
+                        intent = new Intent(Splashscreen.this,
+                                TutoActivity.class);
+                    }
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     Splashscreen.this.finish();

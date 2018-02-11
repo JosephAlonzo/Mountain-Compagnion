@@ -38,6 +38,9 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyC3HL0Rm3O7ZXALSlG7XS0TGziH55jg_PU" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".views.TutoActivity"

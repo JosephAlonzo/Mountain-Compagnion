@@ -5,10 +5,11 @@
     <color name="colorAccent">#ff4081</color>
 
     <!-- Screens background -->
-    <color name="bg_screen1">#b12515</color>
-    <color name="bg_screen2">#FFBB00</color>
-    <color name="bg_screen3">#74a443</color>
-
+    <color name="bg_screen1">#a61100</color>
+    <color name="bg_screen2">#8d2693</color>
+    <color name="bg_screen3">#FFBB00</color>
+    <color name="bg_screen4">#36972f</color>
+    <color name="bg_screen5">#149D99</color>
     <!-- dots active colors -->
     <color name="dot_active">#000000</color>
 
