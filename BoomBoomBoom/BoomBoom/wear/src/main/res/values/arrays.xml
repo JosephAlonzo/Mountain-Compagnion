@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="screens">
+        <item>heart</item>
+    </string-array>
+
+    <string-array name="heart">
+        <item>Heart Beat</item>
+    </string-array>
+
+</resources>
