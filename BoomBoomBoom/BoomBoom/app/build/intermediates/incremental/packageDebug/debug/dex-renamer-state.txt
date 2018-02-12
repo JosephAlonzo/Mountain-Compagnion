@@ -1,0 +1,4 @@
+#Thu Feb 08 16:04:01 CET 2018
+base.0=G\:\\LP_TeProW\\Programmation_Android_Wear\\BoomBoom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
