@@ -1,0 +1,71 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.td.yassine.zekri.boomboom.fragments.Display_session_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textViewNomSession"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewDateSession"
+        android:layout_width="142dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="94dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="18dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHeureSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomSession"/>
+
+    <TextView
+        android:id="@+id/textViewHeureSession"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="234dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="94dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStartSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateSession"/>
+
+    <Button
+        android:id="@+id/buttonStartSession"
+        android:layout_width="197dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Démarrer la session !"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833"/>
+
+</android.support.constraint.ConstraintLayout>

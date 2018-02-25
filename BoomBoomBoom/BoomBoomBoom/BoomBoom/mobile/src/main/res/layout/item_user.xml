@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textViewNomUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom User"
+            android:textSize="24dp"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/textViewFrequenceUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNomUser"
+            android:text="150"
+            android:textSize="45dp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

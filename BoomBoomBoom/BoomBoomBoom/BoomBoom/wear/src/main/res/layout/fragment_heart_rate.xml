@@ -1,0 +1,92 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.zekri.yassine.wear.fragments.HeartRateFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:id="@+id/buttonQuitterSeance"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="149dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:text="Quitter la séance !"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHeartRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/textViewHeartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewMoyenne"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeartRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="moyenne"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeartRate">
+
+        <Button
+            android:id="@+id/buttonMinus"
+            style="@android:style/Widget.Button"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="15sp"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:text="-"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="155dp" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            style="@android:style/Widget.Button"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="155dp"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

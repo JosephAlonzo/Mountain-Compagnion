@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BoomBoom.iml" filepath="$PROJECT_DIR$/BoomBoom.iml" />
+      <module fileurl="file://G:\LP_TeProW\Programmation_Android_Wear\BoomBoomBoom\BoomBoom\mobile\app.iml" filepath="G:\LP_TeProW\Programmation_Android_Wear\BoomBoomBoom\BoomBoom\mobile\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commun/commun.iml" filepath="$PROJECT_DIR$/commun/commun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linked/linked.iml" filepath="$PROJECT_DIR$/linked/linked.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile/mobile.iml" filepath="$PROJECT_DIR$/mobile/mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
+    </modules>
+  </component>
+</project>

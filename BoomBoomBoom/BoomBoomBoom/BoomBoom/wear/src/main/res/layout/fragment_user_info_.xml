@@ -1,0 +1,83 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.zekri.yassine.wear.fragments.UserInfo_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewNomSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="11dp"
+        android:text="Nom de la session"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHeureSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateSession"/>
+
+    <TextView
+        android:id="@+id/textViewHeureSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="9dp"
+        android:text="Heure de la session"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNomUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomSession"/>
+
+    <TextView
+        android:id="@+id/textViewDateSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Date de la session"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNomSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextNomUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:hint="Saisir un nom d'utilisateur ..."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonJoinSession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeureSession"/>
+
+    <Button
+        android:id="@+id/buttonJoinSession"
+        android:layout_width="143dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="13dp"
+        android:text="Rejoindre la session .."
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomUser"/>
+</android.support.constraint.ConstraintLayout>
