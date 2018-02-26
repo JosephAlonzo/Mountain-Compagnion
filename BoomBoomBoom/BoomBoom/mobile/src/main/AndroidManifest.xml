@@ -23,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Account.RegisterActivity"/>
+        <activity android:name=".Account.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name=".Account.ProfilActivity"
             android:theme="@style/AppTheme.NoActionBar">

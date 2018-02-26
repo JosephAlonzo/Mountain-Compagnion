@@ -1,0 +1,7 @@
+#Tue Dec 19 19:02:42 CET 2017
+base.0=G\:\\LP_TeProW\\Projet\\Dev\\ProjetMountainCompanionV1 - Copie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=G\:\\LP_TeProW\\Projet\\Dev\\ProjetMountainCompanionV1 - Copie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes2.dex
+base.1=G\:\\LP_TeProW\\Projet\\Dev\\ProjetMountainCompanionV1 - Copie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+file.0=G\:\\LP_TeProW\\Projet\\Dev\\ProjetMountainCompanionV1 - Copie\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

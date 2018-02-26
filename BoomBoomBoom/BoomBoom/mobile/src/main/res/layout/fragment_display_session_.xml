@@ -29,13 +29,14 @@
         android:layout_height="22dp"
         android:layout_marginBottom="94dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginStart="200dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="18dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/textViewHeureSession"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomSession"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomSession" />
 
     <TextView
         android:id="@+id/textViewHeureSession"
@@ -51,8 +52,9 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonStartSession"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDateSession"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateSession" />
 
     <Button
         android:id="@+id/buttonStartSession"
@@ -66,6 +68,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
         app:layout_constraintVertical_bias="0.833"/>
 
 </android.support.constraint.ConstraintLayout>

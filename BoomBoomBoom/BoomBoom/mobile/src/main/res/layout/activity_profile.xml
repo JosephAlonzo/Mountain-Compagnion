@@ -80,6 +80,8 @@
             android:id="@+id/buttonSave"
             android:text="Sauvegarder informations"
             android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:textColor="#fff"
             android:layout_height="wrap_content" />
 
 

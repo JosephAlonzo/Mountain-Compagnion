@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -193,4 +194,5 @@ public class Show_session_Fragment extends Fragment implements Start_session_Fra
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
